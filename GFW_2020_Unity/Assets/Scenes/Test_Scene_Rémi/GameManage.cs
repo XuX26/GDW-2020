@@ -10,26 +10,22 @@ public class GameManage : MonoBehaviour
 
     public GameObject Spawner;
     public bool Can_Destroy;
-    public int timer = 600;
+
+    public float speed;
+    public float speedup;
     public bool collide;
     public bool restart;
     void Start()
     {
-        
-        
+        TimerStart();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        Game();
-
-       
-        if (etape == Phase.Timer)
-        {
-            timer -= 1;
-        }
-
+    Game();
+        
     }
 
     public void Game()
@@ -43,29 +39,21 @@ public class GameManage : MonoBehaviour
         else
         if (etape == Phase.PlayerAndWallSpawn)
         {
-            etape = Phase.Timer;
-            Spawner.GetComponent<GameManage>().TimerStart();
+            
             Spawner.GetComponent<GameManage>().MovePlayer(true);
             Can_Destroy = true;
         }
         else
-        if (etape == Phase.Timer && timer <= 0)
+        if (etape == Phase.Verif) //Lorsque le joueur passera le mur
         {
             Can_Destroy = false;
-            etape = Phase.Verif;
-
-        }
-        else
-        if (etape == Phase.Verif)
-        {
             Spawner.GetComponent<GameManage>().ScoreCheck();
-
+            Restart();
         }
     }
     public void Restart()
     {
-        timer = 600;
-        restart = false;
+        Spawner.GetComponent<GameManage>().UpSpeed();
         etape = Phase.Start;
     }
     public void Spawn()
@@ -73,6 +61,10 @@ public class GameManage : MonoBehaviour
         Debug.Log("Personnage et Mur spawn");
     }
 
+    public void UpSpeed()
+    {
+        speed += speedup;
+    }
     public void TimerStart()
     {
         Debug.Log("Timer Start");
