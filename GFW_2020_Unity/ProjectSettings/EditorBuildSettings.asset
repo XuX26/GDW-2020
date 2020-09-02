@@ -4,5 +4,20 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: "Assets/Scenes/Test_Scene_R\xE9mi/Menu Principal.unity"
+    guid: 1f682b8ad77b892449ce850c055261b9
+  - enabled: 1
+    path: "Assets/Scenes/Test_Scene_R\xE9mi/R\xE9mi Test.unity"
+    guid: bc0e42fac6f5f0548978f810ca576471
+  - enabled: 1
+    path: "Assets/Scenes/Test_Scene_R\xE9mi/Victoire.unity"
+    guid: af966d1f16d60f9459c4cf8bd500c808
+  - enabled: 1
+    path: "Assets/Scenes/Test_Scene_R\xE9mi/Credits.unity"
+    guid: e1babb187d8797d47ac297d617af0a62
+  - enabled: 1
+    path: "Assets/Scenes/Test_Scene_R\xE9mi/Controls.unity"
+    guid: 7d5dda9c91b477247a2fff9375799c10
   m_configObjects: {}
