@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class WallCreator : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float gap;
+    public GameObject position;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    private GameObject firstCube;
+    private float cubeSize;
+
+
 }
