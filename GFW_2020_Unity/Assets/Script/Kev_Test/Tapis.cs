@@ -5,11 +5,16 @@ using UnityEngine;
 public class Tapis : MonoBehaviour
 {
     public float speed;
+   // public Rigidbody rb;
 
     private void OnTriggerStay(Collider other)
     {
         Debug.Log("coucou");
-        other.gameObject.transform.Translate(Vector3.back * speed); // Vector3.forward
+        if(other.gameObject.CompareTag("Player"))
+        {
+            other.gameObject.transform.Translate(gameObject.transform.forward * speed); // Vector3.back
+        }
+        
     }
 
 }
