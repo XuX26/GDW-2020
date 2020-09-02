@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("mouseDown");
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit))
+            if (Physics.Raycast(ray, out hit) && hit.transform.gameObject.tag == "Wall" )
             {
                 BreakWallOnRaycast(hit);
             }

@@ -9,7 +9,7 @@ public class Tapis : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        Debug.Log("coucou");
+        //Debug.Log("coucou");
         if(other.gameObject.CompareTag("Player"))
         {
             other.gameObject.transform.Translate(gameObject.transform.forward * speed); // Vector3.back
