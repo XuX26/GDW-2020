@@ -28,7 +28,6 @@ public class PlayerController : MonoBehaviour
                 BreakWallOnRaycast(hit);
             }
         }
-
     }
 
     void BreakWallOnRaycast(RaycastHit hit)
