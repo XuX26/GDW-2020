@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class PoseManager
+public class PoseManager : MonoBehaviour
 {
 
-    public static bool passe;
-    public static bool instancePose;
-    public static bool end;
+    public bool passe;
+    public bool instancePose;
+    public bool end;
     //public bool Victoire;
     // public bool timerOk;
 
