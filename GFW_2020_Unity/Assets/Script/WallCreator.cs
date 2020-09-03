@@ -15,9 +15,12 @@ public class WallCreator : MonoBehaviour
     private int nbrCubeInLane;
     private int nbrLane;
 
+    private Animator anim;
+
 
     void Start()
     {
+        anim = GetComponent<Animator>();
         cubeSize = CubeModel.GetComponent<BoxCollider>().size.x; //only x because it's a square
         CreateWall();
     }
@@ -26,6 +29,7 @@ public class WallCreator : MonoBehaviour
     {
         SetNbrOfCubes();
         InstanciateCubes();
+        anim.Play("WallPop");
     }
 
     void SetNbrOfCubes()
