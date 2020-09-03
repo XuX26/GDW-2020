@@ -637,10 +637,7 @@ MonoBehaviour:
   timerRound: 14
   lifeLeft: 3
   timeLeft: 0
-  speed: 1
   speedup: 0.1
-  collide: 0
-  restart: 1
   isPassed: 0
   instancePose: {fileID: 1713813370}
 --- !u!4 &952457428
@@ -1075,6 +1072,10 @@ MonoBehaviour:
   - {fileID: 6670364138151187059, guid: 3c8f12c3a0f568f49b9f9e5ecc776e34, type: 3}
   - {fileID: 6967655834000550340, guid: f1de60756bedf2f41aeb1c2de4967da8, type: 3}
   - {fileID: 6025956448035336773, guid: 2b4834fa1a534ba418644ea6f758535c, type: 3}
+  - {fileID: 5287389626242214605, guid: 42969bd5d524b494b9eda20a6e2b6674, type: 3}
+  - {fileID: 603635142689587774, guid: f7606dac995d1b84bae39e1535630217, type: 3}
+  - {fileID: 4540170834255685536, guid: 4d91aa41f4a3c4d4cbe85b37b7c13055, type: 3}
+  - {fileID: 2830791260979639426, guid: 80da40ec09184a54e9e3aa604b00b92f, type: 3}
   actualChar: {fileID: 0}
 --- !u!114 &1713813371
 MonoBehaviour:
