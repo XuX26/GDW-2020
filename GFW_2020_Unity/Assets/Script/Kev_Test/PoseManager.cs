@@ -7,9 +7,9 @@ public class PoseManager : MonoBehaviour
 
     public bool passe;
     public bool instancePose;
-    public bool Victoire;
-    public bool defaite;
+    public bool end;
     public bool touch;
-   // public bool timerOk;
+    //public bool Victoire;
+    // public bool timerOk;
 
 }

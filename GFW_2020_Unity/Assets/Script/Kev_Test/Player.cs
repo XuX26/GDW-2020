@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (gameObject.transform.CompareTag("WallPas"))
+        if (other.gameObject.transform.CompareTag("WallPas"))
         {
             PoseManager.passe = true;
         }
@@ -50,7 +50,7 @@ public class Player : MonoBehaviour
         }
         else if(PoseManager.passe == false && PoseManager.touch) // rajouter un couldown après avoir toucher le mur
         {
-            PoseManager.defaite = true;
+            PoseManager.end = true;
             //FindObjectOfType<GameManager>().reloadScene();
         }
     }
