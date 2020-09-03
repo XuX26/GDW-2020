@@ -1040,9 +1040,10 @@ GameObject:
   - component: {fileID: 7780468342224565118}
   - component: {fileID: 6967655834000550341}
   - component: {fileID: 454079692600147593}
+  - component: {fileID: 6750291053601586820}
   m_Layer: 0
   m_Name: Character_Skinny_2
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1054,7 +1055,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6967655834000550340}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 1.32, y: -0.76, z: 68.14}
   m_LocalScale: {x: 1.9022739, y: 2.2287354, z: 1.1483}
   m_Children:
@@ -1067,7 +1068,7 @@ Transform:
   - {fileID: 3233114726547240261}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!54 &6967655834000550341
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1082,7 +1083,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 0
 --- !u!65 &454079692600147593
 BoxCollider:
@@ -1097,6 +1098,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0834621, y: 0.024624828, z: 0.4925321}
   m_Center: {x: 0.09951045, y: -0.054796528, z: 0.253734}
+--- !u!114 &6750291053601586820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6967655834000550340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd69014193030c343b4154ea0cad429b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7320735952803876477
 GameObject:
   m_ObjectHideFlags: 0

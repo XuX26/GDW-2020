@@ -7,7 +7,11 @@ public class WinTrigger : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        gameManager.AddScore();
+        if (other.gameObject.tag == "Player")
+        {
+            gameManager.isPassed = true;
+            gameManager.UpdateGameState(Phase.Check);
+            Debug.Log("pass !");
+        }
     }
-
 }

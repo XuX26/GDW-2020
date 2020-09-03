@@ -1040,9 +1040,10 @@ GameObject:
   - component: {fileID: 5749543564008268328}
   - component: {fileID: 4936415525479184531}
   - component: {fileID: 6146122159523449126}
+  - component: {fileID: -922342893099840279}
   m_Layer: 0
   m_Name: Character_Fat_3
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1054,7 +1055,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4936415525479184530}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 1.7224352, y: -1.37, z: 68.44}
   m_LocalScale: {x: 1.781932, y: 1.9125758, z: 1.1483}
   m_Children:
@@ -1069,7 +1070,7 @@ Transform:
   - {fileID: 3311820556116507509}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!54 &4936415525479184531
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1084,7 +1085,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 0
 --- !u!65 &6146122159523449126
 BoxCollider:
@@ -1099,6 +1100,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.70313597, y: 0.03195064, z: 1}
   m_Center: {x: 0.017811865, y: 0.12446335, z: 0}
+--- !u!114 &-922342893099840279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4936415525479184530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd69014193030c343b4154ea0cad429b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5322597014996069415
 GameObject:
   m_ObjectHideFlags: 0

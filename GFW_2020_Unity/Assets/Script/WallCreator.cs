@@ -30,7 +30,6 @@ public class WallCreator : MonoBehaviour
     {
         SetNbrOfCubes();
         InstanciateCubes();
-        anim.Play("WallPop");
     }
 
     void SetNbrOfCubes()
@@ -85,7 +84,6 @@ public class WallCreator : MonoBehaviour
 
     public void AddDestroyedCube(GameObject cube)
     {
-        Debug.Log(cube);
         destroyedCube.Add(cube);
     }
 

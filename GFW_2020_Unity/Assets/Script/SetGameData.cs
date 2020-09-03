@@ -1,6 +1,7 @@
 ﻿using UnityEditor;
+using UnityEngine;
 
-public class SetGameData
+public class SetGameData : MonoBehaviour
 {
     public float characterSpeed;
 

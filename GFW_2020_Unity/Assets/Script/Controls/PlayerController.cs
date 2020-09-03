@@ -23,8 +23,9 @@ public class PlayerController : MonoBehaviour
 
     void ReadInput()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && gameManager.state == Phase.PlayMode)
         {
+            int layerMask = 1 << 8;
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             if (!instantDestroyMode)
@@ -37,7 +38,6 @@ public class PlayerController : MonoBehaviour
 
             else
             {
-                int layerMask = 1 << 8;
                 RaycastHit[] hits = Physics.RaycastAll(ray, maxRangeRayCast, layerMask);
                 for (int i = 1; i < hits.Length; i++)
                 {

@@ -7,25 +7,26 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     // Start is called before the first frame update
-    Phase state = Phase.Start;
+    public Phase state = Phase.Start;
 
     public GameObject Spawner;
     public bool Can_Destroy;
     public WallCreator wallCreator;
+    public CanvasManager CanvasManager;
     public float timerStart;
-    public int life;
+    public float timerRound;
+    public int lifeLeft;
+    public float timeLeft;
 
     public float speed;
     public float speedup;
     public bool collide;
     public bool restart;
     public bool isPassed;
-
-    private InstancePose instancePose;
+    public InstancePose instancePose;
     
     void Start()
     {
-        instancePose = GetComponent<InstancePose>();
         UpdateGameState(Phase.Start);
     }
 
@@ -40,6 +41,16 @@ public class GameManager : MonoBehaviour
                 UpdateGameState(Phase.NewRound);
             }
         }
+        else if (state == Phase.PlayMode)
+        {
+            timeLeft -= Time.deltaTime;
+            if (timeLeft <= 0)
+            {
+                UpdateGameState(Phase.Check);
+                Debug.Log("Time out ! ");
+            }
+        }
+
     }
 
     public void UpdateGameState(Phase newState)
@@ -50,24 +61,36 @@ public class GameManager : MonoBehaviour
         }
         else if (state == Phase.NewRound)
         {
+            Debug.Log("New Round Called");
+            RestartValues();
             Spawn();
             //Spawner.GetComponent<GameManager>().MovePlayer(true);
+            UpdateGameState(Phase.PlayMode);
+            UpSpeed();
+
         }
         else if (state == Phase.Check) //Fin du timer ou trigger enter
         {
+            DestroyChar();
             CheckResult();
+            CheckLife();
+        }
+        else if (state == Phase.GameOver)
+        {
+
         }
     }
-    public void NextRound()
-    {
-        UpdateGameState(Phase.NewRound);
-        Spawner.GetComponent<GameManager>().UpSpeed();
-    }
+    
     public void Spawn()
     {
-        //instancePose.instance();
+        instancePose.InstanciateCharacter();
         wallCreator.ResetWall();
         Debug.Log("Personnage et Mur spawn");
+    }
+
+    private void DestroyChar()
+    {
+        Destroy(instancePose.actualChar.gameObject);
     }
 
     public void UpSpeed()
@@ -75,15 +98,10 @@ public class GameManager : MonoBehaviour
         speed += speedup;
     }
 
-    public void MovePlayer(bool Move)
+    void RestartValues()
     {
-        if(Move==true)
-        {
-            Debug.Log("Le Perso avance");
-        }else
-        {
-            Debug.Log("Le Perso se stop");
-        }
+        timeLeft = timerRound;
+        isPassed = false;
     }
 
     public void CheckResult()
@@ -91,13 +109,11 @@ public class GameManager : MonoBehaviour
         if (isPassed)
         {
             AddScore();
-            UpdateGameState(Phase.NewRound);
         }
 
         else
         {
             LoseOneLife();
-
         }
     }
 
@@ -108,13 +124,17 @@ public class GameManager : MonoBehaviour
 
     void LoseOneLife()
     {
-
+        //CanvasManager.DisplayX(lifeLeft);
     }
 
     void CheckLife()
     {
-        if(life == 0)
+        if(lifeLeft == 0)
             UpdateGameState(Phase.GameOver);
+        else
+        {
+            UpdateGameState(Phase.NewRound);
+        }
     }
 }
 public enum Phase

@@ -17,22 +17,12 @@ public class CanvasManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.T))
         {
-            fail();
+            //DisplayX();
         }
     }
 
-    public void fail()
+    public void DisplayX(int life)
     {
-        if(life==3)
-        {
-            //Ecran de Score
-            Debug.Log("Score");
-        }
-        else
-        {
-            life += 1;
-            Croix[life - 1].SetActive(true);
-        }
-        
+        Croix[life].SetActive(true);
     }
 }

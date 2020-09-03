@@ -14,7 +14,15 @@ public class Character : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = Vector3.forward * GameData.characterSpeed;
+        rb.velocity = Vector3.back * GameData.characterSpeed;
+    }
+
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.transform.tag == "Wall")
+        {
+            rb.freezeRotation = false;
+        }
     }
 }
 
