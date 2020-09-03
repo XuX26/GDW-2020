@@ -7,6 +7,12 @@ public class PlayerController : MonoBehaviour
 {
     public bool instantDestroyMode;
     public float maxRangeRayCast;
+    public WallCreator wallCreator;
+
+    void Start()
+    {
+        wallCreator = GetComponent<WallCreator>();
+    }
 
     void Update()
     {
@@ -35,16 +41,22 @@ public class PlayerController : MonoBehaviour
                 {
                     BreakWallOnRaycast(hits[i]);
                 }
-
             }
         }
 
         if (Input.GetKeyDown(KeyCode.R))
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+        else if (Input.GetKeyDown(KeyCode.W))
+        {
+            wallCreator.ResetWall();
+            Debug.Log("Wall Reset");
+        }
     }
 
     void BreakWallOnRaycast(RaycastHit hit)
     {
         hit.transform.gameObject.SetActive(false);
+        wallCreator.AddDestroyedCube(hit.transform.gameObject);
     }
 }
