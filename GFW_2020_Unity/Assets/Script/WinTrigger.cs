@@ -9,9 +9,12 @@ public class WinTrigger : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            gameManager.isPassed = true;
-            gameManager.UpdateGameState(Phase.Check);
-            Debug.Log("pass !");
+            if (!gameManager.isPassed)
+            {
+                gameManager.isPassed = true;
+                gameManager.UpdateGameState(Phase.Check);
+                Debug.Log("pass !");
+            }
         }
     }
 }

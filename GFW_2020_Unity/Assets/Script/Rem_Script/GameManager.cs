@@ -129,6 +129,7 @@ public class GameManager : MonoBehaviour
     void LoseOneLife()
     {
         CanvasManager.DisplayX(lifeLeft);
+        lifeLeft--;
     }
 
     void CheckLife()

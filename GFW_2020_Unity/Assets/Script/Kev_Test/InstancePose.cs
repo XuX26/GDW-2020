@@ -12,6 +12,7 @@ public class InstancePose : MonoBehaviour
     public void InstanciateCharacter()
     {
         randomPrefabInt = Random.Range(0, prefab.Length);
-        actualChar = Instantiate(prefab[randomPrefabInt], this.transform.position, this.transform.rotation);
+        //actualChar = Instantiate(prefab[randomPrefabInt],this.transform, Vector3.zero);
+        actualChar = Instantiate(prefab[randomPrefabInt], transform.position, Quaternion.identity, transform);
     }
 }

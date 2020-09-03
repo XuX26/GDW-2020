@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Test_Scene_Kev/Menu_Principale.unity
     guid: 5c25b3e433cdf7d499333686ced38a76
+  - enabled: 1
+    path: Assets/Scenes/Final.unity
+    guid: 9dd6987b24d60b448a5ab92c9e7b814d
   m_configObjects: {}
