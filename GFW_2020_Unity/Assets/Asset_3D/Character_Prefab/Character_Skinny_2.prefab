@@ -1039,8 +1039,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7780468342224565118}
   - component: {fileID: 6967655834000550341}
+  - component: {fileID: 454079692600147593}
   m_Layer: 0
-  m_Name: Character_Skinny_Base 1
+  m_Name: Character_Skinny_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1081,8 +1082,21 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 4
+  m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &454079692600147593
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6967655834000550340}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0834621, y: 0.024624828, z: 0.4925321}
+  m_Center: {x: 0.09951045, y: -0.054796528, z: 0.253734}
 --- !u!1 &7320735952803876477
 GameObject:
   m_ObjectHideFlags: 0
