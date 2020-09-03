@@ -1323,7 +1323,7 @@ GameObject:
   - component: {fileID: 6077373951873338470}
   - component: {fileID: 6853629553964685021}
   m_Layer: 0
-  m_Name: Character Cubique 1 1
+  m_Name: Character_Medium_Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
