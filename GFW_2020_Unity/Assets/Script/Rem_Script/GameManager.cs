@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public float timerRound;
     public int lifeLeft;
     public float timeLeft;
+    public SoundManager SoundManager;
 
     public float speedup;
     public bool isPassed;
@@ -105,6 +106,7 @@ public class GameManager : MonoBehaviour
     {
         if (isPassed)
         {
+           SoundManager.PlaySfx("Pass_Mur");
             AddScore();
         }
 
@@ -116,7 +118,7 @@ public class GameManager : MonoBehaviour
 
     public void AddScore()
     {
-        FindObjectOfType<SoundManager>().PlaySfx("Score");
+        SoundManager.PlaySfx("Score");
         ScoreCode.scoreValue += 150;
 
     }

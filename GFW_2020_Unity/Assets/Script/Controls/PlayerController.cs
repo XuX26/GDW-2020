@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public float maxRangeRayCast;
     public float radiusSphereCast;
     public WallCreator wallCreator;
+    public SoundManager SoundManager;
 
     private GameManager gameManager;
     int layerMask = 1 << 8;
@@ -33,6 +34,7 @@ public class PlayerController : MonoBehaviour
             RaycastHit hit;
             if (spamMode && Input.GetMouseButtonDown(0))
             {
+
                 if (!megaDestroyMode)
                 {
                     if (Physics.Raycast(ray, out hit) && hit.transform.gameObject.tag == "Wall")
