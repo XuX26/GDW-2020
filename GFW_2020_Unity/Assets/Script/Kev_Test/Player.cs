@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float temps;
-
+    public PoseManager PoseManager;
 
 
     public void OnTriggerEnter(Collider other)
@@ -18,30 +18,22 @@ public class Player : MonoBehaviour
 
     public void Update()
     {
+        temps -= Time.deltaTime;
         verif();
     }
 
     public void verif()
     {
-        if(PoseManager.passe)
+        if(PoseManager.passe && temps > 0)
         {
             PoseManager.instancePose = true;
+            temps = 10;
            //score ++
         }
-        else if(PoseManager.passe == false) // rajouter un couldown après avoir toucher le mur
+        else if(PoseManager.passe == false && temps <= 0) // rajouter un couldown après avoir toucher le mur
         {
-            temps -= Time.deltaTime;
 
-            //
-
-            if(temps <= 0 && PoseManager.passe == false)
-            {
-                PoseManager.end = true;
-            }
-            else if(temps >= 0 && PoseManager.passe == true)
-            {
-
-            }
+            PoseManager.end = true;
             //FindObjectOfType<GameManager>().reloadScene();
         }
     }

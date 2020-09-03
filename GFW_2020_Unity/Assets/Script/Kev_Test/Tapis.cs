@@ -9,14 +9,18 @@ public class Tapis : MonoBehaviour
     public Vector3 move;
     //public PoseManager poseManager;
 
-    private void OnTriggerStay(Collider other)
+    public void OnTriggerStay(Collider other)
     {
         //Debug.Log("coucou");
         if(other.gameObject.CompareTag("Player")) // poseManager.TimerOK;
         {
-            //  other.gameObject.transform.Translate(gameObject.transform.forward * speed); // Vector3.back
+            //other.gameObject.transform.Translate(gameObject.transform.forward * speed); // Vector3.back
             movement(move);
-        }  
+        }
+        else
+        {
+            speed = 0;
+        }
     }
 
     void movement(Vector3 direction)

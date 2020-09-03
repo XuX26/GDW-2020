@@ -5,14 +5,13 @@ using UnityEngine;
 public class InstancePose : MonoBehaviour
 {
     public GameObject[] prefab;
-
+    public PoseManager PoseManager;
     private int randomPrefabInt;
     public Transform SpawnPos;
-    public float temps;
 
     void Start()
      {
-
+       //instance();
      //   for (int i = 0; i < prefab.Length; i++)
       //  {
       //      prefab[i] = Resources.Load("Prefabs/Prefab" + i) as GameObject;
