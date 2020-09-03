@@ -3490,6 +3490,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   instantDestroyMode: 0
   maxRangeRayCast: 0
+  wallCreator: {fileID: 0}
 --- !u!1 &990434223
 GameObject:
   m_ObjectHideFlags: 0
@@ -7861,6 +7862,75 @@ Transform:
   m_Father: {fileID: 102930260}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2079393352311906142
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4767979901815943287, guid: 42969bd5d524b494b9eda20a6e2b6674,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.8301795
+      objectReference: {fileID: 0}
+    - target: {fileID: 4767979901815943287, guid: 42969bd5d524b494b9eda20a6e2b6674,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.584
+      objectReference: {fileID: 0}
+    - target: {fileID: 4767979901815943287, guid: 42969bd5d524b494b9eda20a6e2b6674,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.021765172
+      objectReference: {fileID: 0}
+    - target: {fileID: 4767979901815943287, guid: 42969bd5d524b494b9eda20a6e2b6674,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4767979901815943287, guid: 42969bd5d524b494b9eda20a6e2b6674,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4767979901815943287, guid: 42969bd5d524b494b9eda20a6e2b6674,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4767979901815943287, guid: 42969bd5d524b494b9eda20a6e2b6674,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4767979901815943287, guid: 42969bd5d524b494b9eda20a6e2b6674,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4767979901815943287, guid: 42969bd5d524b494b9eda20a6e2b6674,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4767979901815943287, guid: 42969bd5d524b494b9eda20a6e2b6674,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4767979901815943287, guid: 42969bd5d524b494b9eda20a6e2b6674,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -180
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287389626242214605, guid: 42969bd5d524b494b9eda20a6e2b6674,
+        type: 3}
+      propertyPath: m_Name
+      value: Character_Skinny_Base
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 42969bd5d524b494b9eda20a6e2b6674, type: 3}
 --- !u!1001 &5947554425428828274
 PrefabInstance:
   m_ObjectHideFlags: 0
