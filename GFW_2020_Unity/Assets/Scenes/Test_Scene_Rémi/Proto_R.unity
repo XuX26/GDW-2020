@@ -176,22 +176,22 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b00bd044d813ef848bfafd9f621b8e4e,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.00000020319115
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b00bd044d813ef848bfafd9f621b8e4e,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9998757
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b00bd044d813ef848bfafd9f621b8e4e,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000012564249
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b00bd044d813ef848bfafd9f621b8e4e,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.015768632
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b00bd044d813ef848bfafd9f621b8e4e,
         type: 3}
@@ -206,7 +206,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b00bd044d813ef848bfafd9f621b8e4e,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 181.80699
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b00bd044d813ef848bfafd9f621b8e4e,
         type: 3}
@@ -490,6 +490,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.1
+  rb: {fileID: 0}
+  move: {x: 0, y: 0, z: 0}
 --- !u!65 &904559639
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -854,7 +856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6516643e124b6ac498311950689eb132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gap: 0.2
+  gap: 0.5
   CubeModel: {fileID: 1129156994}
   firstCubePos: {fileID: 32940437}
   lastCubePos: {fileID: 1261333369}
