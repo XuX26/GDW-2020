@@ -552,8 +552,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: []
-  PoseManager: {fileID: 0}
   SpawnPos: {fileID: 0}
+  temps: 0
 --- !u!114 &952457427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -568,9 +568,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Spawner: {fileID: 0}
   Can_Destroy: 0
-  wallCreator: {fileID: 0}
-  speed: 0
-  speedup: 0
+  wallCreator: {fileID: 1686105164}
+  speed: 1
+  speedup: 0.1
   collide: 0
   restart: 0
 --- !u!4 &952457428
@@ -601,6 +601,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   instantDestroyMode: 0
   maxRangeRayCast: 25
+  wallCreator: {fileID: 1686105164}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

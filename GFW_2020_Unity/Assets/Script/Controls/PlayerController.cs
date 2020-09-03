@@ -9,11 +9,6 @@ public class PlayerController : MonoBehaviour
     public float maxRangeRayCast;
     public WallCreator wallCreator;
 
-    void Start()
-    {
-        wallCreator = GetComponent<WallCreator>();
-    }
-
     void Update()
     {
         ReadInput();
@@ -56,7 +51,7 @@ public class PlayerController : MonoBehaviour
 
     void BreakWallOnRaycast(RaycastHit hit)
     {
-        hit.transform.gameObject.SetActive(false);
         wallCreator.AddDestroyedCube(hit.transform.gameObject);
+        hit.transform.gameObject.SetActive(false);
     }
 }

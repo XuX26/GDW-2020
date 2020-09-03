@@ -12,21 +12,32 @@ public class GameManager : MonoBehaviour
     public GameObject Spawner;
     public bool Can_Destroy;
     public WallCreator wallCreator;
+    public float timerStart;
 
-    private InstancePose instancePose;
     public float speed;
     public float speedup;
     public bool collide;
     public bool restart;
+
+    private InstancePose instancePose;
+    
     void Start()
     {
-        TimerStart();
         instancePose = GetComponent<InstancePose>();
+        UpdateGameState(Phase.Start);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (state == Phase.Start)
+        {
+            timerStart -= Time.deltaTime;
+            if (timerStart < 0)
+            {
+                UpdateGameState(Phase.NewRound);
+            }
+        }
     }
 
     void UpdateGameState(Phase newState)
@@ -34,20 +45,14 @@ public class GameManager : MonoBehaviour
         state = newState;
         if (state == Phase.Start)
         {
-            state = Phase.NewRound;
-            Spawner.GetComponent<GameManager>().Spawn();
-
         }
         else if (state == Phase.NewRound)
         {
             Spawn();
-            Spawner.GetComponent<GameManager>().MovePlayer(true);
-            Can_Destroy = true;
+            //Spawner.GetComponent<GameManager>().MovePlayer(true);
         }
-        else if (state == Phase.Verif) //Lorsque le joueur passera le mur
+        else if (state == Phase.PlayMode) //Lorsque le joueur peut detruire
         {
-            Can_Destroy = false;
-            Spawner.GetComponent<GameManager>().ScoreCheck();
         }
     }
     public void NextRound()
@@ -66,11 +71,7 @@ public class GameManager : MonoBehaviour
     {
         speed += speedup;
     }
-    public void TimerStart()
-    {
-        Debug.Log("Timer Start");
-    }
-    
+
     public void MovePlayer(bool Move)
     {
         if(Move==true)

@@ -14,7 +14,7 @@ public class WallCreator : MonoBehaviour
     private float cubeSize;
     private int nbrCubeInLane;
     private int nbrLane;
-    private List<GameObject> destroyedCube;
+    private List<GameObject> destroyedCube = new List<GameObject>();
 
     private Animator anim;
 
@@ -80,10 +80,12 @@ public class WallCreator : MonoBehaviour
             ReactiveCube(cube);
         }
         CleanCubeList();
+        anim.Play("WallPop");
     }
 
     public void AddDestroyedCube(GameObject cube)
     {
+        Debug.Log(cube);
         destroyedCube.Add(cube);
     }
 
