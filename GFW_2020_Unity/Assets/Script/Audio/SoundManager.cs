@@ -61,5 +61,5 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    //FindObjectOfType<SoundManager>().Play("");
+    //FindObjectOfType<soundManager>().Play("");
 }
