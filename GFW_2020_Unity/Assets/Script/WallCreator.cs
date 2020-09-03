@@ -14,6 +14,7 @@ public class WallCreator : MonoBehaviour
     private float cubeSize;
     private int nbrCubeInLane;
     private int nbrLane;
+    private List<GameObject> destroyedCube;
 
     private Animator anim;
 
@@ -74,7 +75,28 @@ public class WallCreator : MonoBehaviour
 
     public void ResetWall()
     {
-
+        foreach (GameObject cube in destroyedCube)
+        {
+            ReactiveCube(cube);
+        }
+        CleanCubeList();
     }
 
+    public void AddDestroyedCube(GameObject cube)
+    {
+        destroyedCube.Add(cube);
+    }
+
+    void ReactiveCube(GameObject cube)
+    {
+        cube.SetActive(true);
+    }
+
+    void CleanCubeList()
+    {
+        foreach (GameObject cube in destroyedCube)
+        {
+            destroyedCube.Remove(cube);
+        }
+    }
 }

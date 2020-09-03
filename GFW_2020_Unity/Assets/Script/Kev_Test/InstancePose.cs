@@ -5,7 +5,6 @@ using UnityEngine;
 public class InstancePose : MonoBehaviour
 {
     public GameObject[] prefab;
-    public PoseManager PoseManager;
 
     private int randomPrefabInt;
     public Transform SpawnPos; 
