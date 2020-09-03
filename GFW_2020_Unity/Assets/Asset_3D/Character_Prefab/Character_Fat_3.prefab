@@ -1039,8 +1039,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5749543564008268328}
   - component: {fileID: 4936415525479184531}
+  - component: {fileID: 6146122159523449126}
   m_Layer: 0
-  m_Name: Character_Fat 1
+  m_Name: Character_Fat_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1083,8 +1084,21 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 4
+  m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &6146122159523449126
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4936415525479184530}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.70313597, y: 0.03195064, z: 1}
+  m_Center: {x: 0.017811865, y: 0.12446335, z: 0}
 --- !u!1 &5322597014996069415
 GameObject:
   m_ObjectHideFlags: 0
