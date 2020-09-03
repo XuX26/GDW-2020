@@ -87,6 +87,11 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Score: 465.31");
     }
+
+    public void AddScore()
+    {
+
+    }
 }
 public enum Phase
 {

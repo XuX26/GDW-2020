@@ -9,7 +9,12 @@ public class PlayerController : MonoBehaviour
     public float maxRangeRayCast;
     public WallCreator wallCreator;
 
-    public GameManager gameManager;
+    private GameManager gameManager;
+
+    void Start()
+    {
+        gameManager = GetComponent<GameManager>();
+    }
 
     void Update()
     {
