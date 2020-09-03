@@ -20,7 +20,10 @@ EditorBuildSettings:
   - enabled: 0
     path: "Assets/Scenes/Test_Scene_R\xE9mi/Controls.unity"
     guid: 7d5dda9c91b477247a2fff9375799c10
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Proto_0.unity
     guid: 2b597d0bd2f344044b60e0a4a0759f30
+  - enabled: 1
+    path: Assets/Scenes/Test_Scene_Kev/Menu_Principale.unity
+    guid: 5c25b3e433cdf7d499333686ced38a76
   m_configObjects: {}

@@ -38,6 +38,7 @@ public class PlayerController : MonoBehaviour
                     if (Physics.Raycast(ray, out hit) && hit.transform.gameObject.tag == "Wall")
                     {
                         BreakWallOnRaycast(hit);
+                        
                     }
                 }
 
@@ -47,6 +48,7 @@ public class PlayerController : MonoBehaviour
                     for (int i = 0; i < hits.Length; i++)
                     {
                         BreakWallOnRaycast(hits[i]);
+                        
                     }
                 }
 
@@ -58,6 +60,7 @@ public class PlayerController : MonoBehaviour
                     if (Physics.Raycast(ray, out hit) && hit.transform.gameObject.tag == "Wall")
                     {
                         BreakWallOnRaycast(hit);
+
                     }
                 }
 
@@ -67,6 +70,8 @@ public class PlayerController : MonoBehaviour
                     for (int i = 0; i < hits.Length; i++)
                     {
                         BreakWallOnRaycast(hits[i]);
+                        FindObjectOfType<SoundManager>().PlaySfx("Destruction_Wall");
+
                     }
                 }
             }

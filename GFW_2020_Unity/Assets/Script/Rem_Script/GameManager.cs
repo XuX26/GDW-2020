@@ -116,13 +116,14 @@ public class GameManager : MonoBehaviour
 
     public void AddScore()
     {
+        FindObjectOfType<SoundManager>().PlaySfx("Score");
+        ScoreCode.scoreValue += 150;
 
     }
 
     void LoseOneLife()
     {
-        CanvasManager.DisplayX(lifeLeft);
-        lifeLeft--;
+        //CanvasManager.DisplayX(lifeLeft);
     }
 
     void CheckLife()

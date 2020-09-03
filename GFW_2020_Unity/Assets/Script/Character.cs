@@ -21,6 +21,7 @@ public class Character : MonoBehaviour
     {
         if (other.transform.tag == "Wall")
         {
+            FindObjectOfType<SoundManager>().PlaySfx("Collision2");
             rb.freezeRotation = false;
         }
     }
