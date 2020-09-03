@@ -647,7 +647,7 @@ PrefabInstance:
     - target: {fileID: 7427658463368323302, guid: 0853d993174883240a48390848a9b1ae,
         type: 3}
       propertyPath: m_Name
-      value: Character Cubique Skiny
+      value: Character_Skiny
       objectReference: {fileID: 0}
     - target: {fileID: 7809110535215938140, guid: 0853d993174883240a48390848a9b1ae,
         type: 3}
