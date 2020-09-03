@@ -551,9 +551,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcc8af879c0e0524eab339f69d400834, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.1
+  speed: 1
   rb: {fileID: 1168803406}
-  move: {x: 0, y: 0, z: 10}
+  move: {x: 0, y: 0, z: 4}
 --- !u!1 &87295117
 GameObject:
   m_ObjectHideFlags: 0
@@ -1048,10 +1048,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0529310700b3965468b5c89a2b09524a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  passe: 1
-  instancePose: 1
+  passe: 0
+  instancePose: 0
   end: 0
-  touch: 0
 --- !u!4 &209855452
 Transform:
   m_ObjectHideFlags: 0
@@ -1815,6 +1814,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   instantDestroyMode: 0
   maxRangeRayCast: 0
+  wallCreator: {fileID: 0}
 --- !u!1 &453623224
 GameObject:
   m_ObjectHideFlags: 0
@@ -2664,7 +2664,7 @@ GameObject:
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2684,7 +2684,6 @@ MonoBehaviour:
   - {fileID: 1168803404}
   PoseManager: {fileID: 209855451}
   SpawnPos: {fileID: 798759725}
-  temps: 0
 --- !u!4 &798759725
 Transform:
   m_ObjectHideFlags: 0
@@ -3507,6 +3506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cece0f3d725b6c45bbac54fd5353ba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  temps: 10
   PoseManager: {fileID: 209855451}
 --- !u!65 &1168803409
 BoxCollider:
@@ -4368,12 +4368,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b00bd044d813ef848bfafd9f621b8e4e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 303.85
+      value: 304.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b00bd044d813ef848bfafd9f621b8e4e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 189.40604
+      value: 193.03
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b00bd044d813ef848bfafd9f621b8e4e,
         type: 3}
