@@ -570,11 +570,6 @@ MonoBehaviour:
     volume: 1
     loop: 0
     source: {fileID: 0}
-  - name: Timer
-    clip: {fileID: 8300000, guid: 454dee95f0eb6ea47b868619f7fd32d9, type: 3}
-    volume: 1
-    loop: 0
-    source: {fileID: 0}
 --- !u!4 &901395442
 Transform:
   m_ObjectHideFlags: 0
