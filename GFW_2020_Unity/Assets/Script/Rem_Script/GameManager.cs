@@ -2,15 +2,18 @@
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class GameManage : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
     // Start is called before the first frame update
-    Phase etape = Phase.Start;
+    Phase state = Phase.Start;
 
     public GameObject Spawner;
     public bool Can_Destroy;
+    public WallCreator wallCreator;
 
+    private InstancePose instancePose;
     public float speed;
     public float speedup;
     public bool collide;
@@ -18,46 +21,44 @@ public class GameManage : MonoBehaviour
     void Start()
     {
         TimerStart();
-
+        instancePose = GetComponent<InstancePose>();
     }
 
     // Update is called once per frame
     void Update()
     {
-    Game();
-        
     }
 
-    public void Game()
+    void UpdateGameState(Phase newState)
     {
-        if (etape == Phase.Start)
+        state = newState;
+        if (state == Phase.Start)
         {
-            etape = Phase.PlayerAndWallSpawn;
-            Spawner.GetComponent<GameManage>().Spawn();
+            state = Phase.NewRound;
+            Spawner.GetComponent<GameManager>().Spawn();
 
         }
-        else
-        if (etape == Phase.PlayerAndWallSpawn)
+        else if (state == Phase.NewRound)
         {
-            
-            Spawner.GetComponent<GameManage>().MovePlayer(true);
+            Spawn();
+            Spawner.GetComponent<GameManager>().MovePlayer(true);
             Can_Destroy = true;
         }
-        else
-        if (etape == Phase.Verif) //Lorsque le joueur passera le mur
+        else if (state == Phase.Verif) //Lorsque le joueur passera le mur
         {
             Can_Destroy = false;
-            Spawner.GetComponent<GameManage>().ScoreCheck();
-            Restart();
+            Spawner.GetComponent<GameManager>().ScoreCheck();
         }
     }
-    public void Restart()
+    public void NextRound()
     {
-        Spawner.GetComponent<GameManage>().UpSpeed();
-        etape = Phase.Start;
+        UpdateGameState(Phase.NewRound);
+        Spawner.GetComponent<GameManager>().UpSpeed();
     }
     public void Spawn()
     {
+        //instancePose.instance();
+        wallCreator.ResetWall();
         Debug.Log("Personnage et Mur spawn");
     }
 
@@ -89,9 +90,8 @@ public class GameManage : MonoBehaviour
 public enum Phase
 {
     Start,
-    PlayerAndWallSpawn,
-    Timer,
-    MovePlayer,
+    NewRound,
+    PlayMode,
     Verif,
     Score,
 }

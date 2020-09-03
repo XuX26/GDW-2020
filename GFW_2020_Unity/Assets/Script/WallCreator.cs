@@ -72,5 +72,9 @@ public class WallCreator : MonoBehaviour
         return (lastCubePos.localPosition.y - firstCubePos.localPosition.y);
     }
 
+    public void ResetWall()
+    {
+
+    }
 
 }
