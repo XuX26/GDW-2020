@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -17,11 +18,13 @@ public class GameManager : MonoBehaviour
     public float timerRound;
     public int lifeLeft;
     public float timeLeft;
-    public SoundManager SoundManager;
+    public SoundManager soundManager;
 
     public float speedup;
     public bool isPassed;
     public InstancePose instancePose;
+
+    private int score;
     
     void Start()
     {
@@ -75,7 +78,7 @@ public class GameManager : MonoBehaviour
         }
         else if (state == Phase.GameOver)
         {
-
+            CanvasManager.DisplayReplayButton();
         }
     }
     
@@ -106,8 +109,8 @@ public class GameManager : MonoBehaviour
     {
         if (isPassed)
         {
-           SoundManager.PlaySfx("Pass_Mur");
-            AddScore();
+           soundManager.PlaySfx("Pass_Mur");
+           AddScore();
         }
 
         else
@@ -118,14 +121,14 @@ public class GameManager : MonoBehaviour
 
     public void AddScore()
     {
-        SoundManager.PlaySfx("Score");
-        ScoreCode.scoreValue += 150;
-
+        soundManager.PlaySfx("Score");
+        score += 150;
+        CanvasManager.UpdateScore(score);
     }
 
     void LoseOneLife()
     {
-        //CanvasManager.DisplayX(lifeLeft);
+        CanvasManager.DisplayX(lifeLeft);
     }
 
     void CheckLife()
@@ -136,6 +139,11 @@ public class GameManager : MonoBehaviour
         {
             UpdateGameState(Phase.NewRound);
         }
+    }
+
+    public void StartNewGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
 public enum Phase
