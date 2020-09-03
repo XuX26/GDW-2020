@@ -161,12 +161,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b00bd044d813ef848bfafd9f621b8e4e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.7
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b00bd044d813ef848bfafd9f621b8e4e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.36
+      value: -2.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b00bd044d813ef848bfafd9f621b8e4e,
         type: 3}
@@ -489,7 +489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcc8af879c0e0524eab339f69d400834, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 1.4
   rb: {fileID: 1592703443}
   move: {x: 0, y: 0, z: -5}
 --- !u!65 &904559639
@@ -825,6 +825,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1686105163}
   - component: {fileID: 1686105164}
+  - component: {fileID: 1686105165}
   m_Layer: 0
   m_Name: WallCreator
   m_TagString: Untagged
@@ -858,7 +859,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6516643e124b6ac498311950689eb132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gap: 0.3
+  gap: 0.4
   CubeModel: {fileID: 1129156994}
   firstCubePos: {fileID: 32940437}
   lastCubePos: {fileID: 1261333369}
+--- !u!95 &1686105165
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686105162}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0c1158e0855dce24c983c57ede1b34f0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
