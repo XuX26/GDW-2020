@@ -13,11 +13,13 @@ public class GameManager : MonoBehaviour
     public bool Can_Destroy;
     public WallCreator wallCreator;
     public float timerStart;
+    public int life;
 
     public float speed;
     public float speedup;
     public bool collide;
     public bool restart;
+    public bool isPassed;
 
     private InstancePose instancePose;
     
@@ -51,8 +53,9 @@ public class GameManager : MonoBehaviour
             Spawn();
             //Spawner.GetComponent<GameManager>().MovePlayer(true);
         }
-        else if (state == Phase.PlayMode) //Lorsque le joueur peut detruire
+        else if (state == Phase.Check) //Fin du timer ou trigger enter
         {
+            CheckResult();
         }
     }
     public void NextRound()
@@ -83,14 +86,35 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void ScoreCheck()
+    public void CheckResult()
     {
-        Debug.Log("Score: 465.31");
+        if (isPassed)
+        {
+            AddScore();
+            UpdateGameState(Phase.NewRound);
+        }
+
+        else
+        {
+            LoseOneLife();
+
+        }
     }
 
     public void AddScore()
     {
 
+    }
+
+    void LoseOneLife()
+    {
+
+    }
+
+    void CheckLife()
+    {
+        if(life == 0)
+            UpdateGameState(Phase.GameOver);
     }
 }
 public enum Phase
@@ -98,6 +122,6 @@ public enum Phase
     Start,
     NewRound,
     PlayMode,
-    Verif,
-    Score,
+    Check,
+    GameOver,
 }
