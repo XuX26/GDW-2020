@@ -46,7 +46,7 @@ public class WallCreator : MonoBehaviour
         Debug.Log(nbrCubeInLane);
         Debug.Log(nbrLane);
 
-        Vector3 NextInstancePose = firstCubePos.localPosition;
+        Vector3 NextInstancePose = firstCubePos.position;
         for (int lane = 1; lane > nbrLane; lane--)
         {
             for (int cube = 0; cube < nbrCubeInLane; cube++)
@@ -55,7 +55,7 @@ public class WallCreator : MonoBehaviour
                 NextInstancePose.x += gap;
             }
 
-            NextInstancePose.x = firstCubePos.localPosition.x;
+            NextInstancePose.x = firstCubePos.position.x;
             NextInstancePose.y -= gap;
         }
         Debug.Log("Wallfinished");
@@ -63,13 +63,13 @@ public class WallCreator : MonoBehaviour
 
     float GetWallLenght()
     {
-       Debug.Log(lastCubePos.localPosition.x - firstCubePos.localPosition.x);
-        return (lastCubePos.localPosition.x - firstCubePos.localPosition.x);
+       Debug.Log(lastCubePos.position.x - firstCubePos.position.x);
+        return (lastCubePos.position.x - firstCubePos.position.x);
     }
 
     float GetWallWidth()
     {
-        return (lastCubePos.localPosition.y - firstCubePos.localPosition.y);
+        return (lastCubePos.position.y - firstCubePos.position.y);
     }
 
     public void ResetWall()

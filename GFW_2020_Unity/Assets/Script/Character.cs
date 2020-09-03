@@ -5,7 +5,7 @@ using UnityEngine;
 public class Character : MonoBehaviour
 {
     private Rigidbody rb;
-    public SoundManager SoundManager;
+    //public SoundManager SoundManager;
 
     void Start()
     {
@@ -22,7 +22,7 @@ public class Character : MonoBehaviour
     {
         if (other.transform.tag == "Wall")
         {
-            SoundManager.PlaySfx("Collision2");
+            SoundManager.instance.PlaySfx("Collision2");
             rb.freezeRotation = false;
         }
     }
