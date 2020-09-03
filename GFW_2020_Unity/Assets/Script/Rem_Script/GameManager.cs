@@ -18,10 +18,7 @@ public class GameManager : MonoBehaviour
     public int lifeLeft;
     public float timeLeft;
 
-    public float speed;
     public float speedup;
-    public bool collide;
-    public bool restart;
     public bool isPassed;
     public InstancePose instancePose;
     
@@ -95,7 +92,7 @@ public class GameManager : MonoBehaviour
 
     public void UpSpeed()
     {
-        speed += speedup;
+        GameData.characterSpeed += speedup;
     }
 
     void RestartValues()

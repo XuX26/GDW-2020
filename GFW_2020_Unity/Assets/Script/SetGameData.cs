@@ -5,7 +5,7 @@ public class SetGameData : MonoBehaviour
 {
     public float characterSpeed;
 
-    void Start()
+    void Update()
     {
         GameData.characterSpeed = characterSpeed;
     }

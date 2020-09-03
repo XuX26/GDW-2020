@@ -94,9 +94,10 @@ public class WallCreator : MonoBehaviour
 
     void CleanCubeList()
     {
-        foreach (GameObject cube in destroyedCube)
-        {
-            destroyedCube.Remove(cube);
-        }
+        //foreach (GameObject cube in destroyedCube)
+        //{
+        //    destroyedCube.Remove(cube);
+        //}
+        destroyedCube = new List<GameObject>();
     }
 }
