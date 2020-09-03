@@ -666,8 +666,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82a8c36d947117d4e95202f9b99070ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  instantDestroyMode: 0
+  megaDestroyMode: 1
+  spamMode: 1
   maxRangeRayCast: 30
+  radiusSphereCast: 0.2
   wallCreator: {fileID: 1686105164}
 --- !u!1 &963194225
 GameObject:
@@ -993,7 +995,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6516643e124b6ac498311950689eb132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gap: 0.4
+  gap: 0.2
   CubeModel: {fileID: 1129156994}
   firstCubePos: {fileID: 32940437}
   lastCubePos: {fileID: 1261333369}

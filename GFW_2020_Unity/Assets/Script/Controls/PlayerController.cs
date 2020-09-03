@@ -5,11 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    public bool instantDestroyMode;
+    public bool megaDestroyMode;
+    public bool spamMode;
     public float maxRangeRayCast;
+    public float radiusSphereCast;
     public WallCreator wallCreator;
 
     private GameManager gameManager;
+    int layerMask = 1 << 8;
+
 
     void Start()
     {
@@ -23,25 +27,47 @@ public class PlayerController : MonoBehaviour
 
     void ReadInput()
     {
-        if (Input.GetMouseButton(0) && gameManager.state == Phase.PlayMode)
+        if (gameManager.state == Phase.PlayMode)
         {
-            int layerMask = 1 << 8;
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
-            if (!instantDestroyMode)
+            if (spamMode && Input.GetMouseButtonDown(0))
             {
-                if (Physics.Raycast(ray, out hit) && hit.transform.gameObject.tag == "Wall")
+                if (!megaDestroyMode)
                 {
-                    BreakWallOnRaycast(hit);
+                    if (Physics.Raycast(ray, out hit) && hit.transform.gameObject.tag == "Wall")
+                    {
+                        BreakWallOnRaycast(hit);
+                    }
                 }
-            }
 
-            else
-            {
-                RaycastHit[] hits = Physics.RaycastAll(ray, maxRangeRayCast, layerMask);
-                for (int i = 1; i < hits.Length; i++)
+                else
                 {
-                    BreakWallOnRaycast(hits[i]);
+                    RaycastHit[] hits = Physics.SphereCastAll(ray, radiusSphereCast, maxRangeRayCast, layerMask);
+                    for (int i = 0; i < hits.Length; i++)
+                    {
+                        BreakWallOnRaycast(hits[i]);
+                    }
+                }
+
+            }
+            else if (!spamMode && Input.GetMouseButton(0))
+            {
+                if (!megaDestroyMode)
+                {
+                    if (Physics.Raycast(ray, out hit) && hit.transform.gameObject.tag == "Wall")
+                    {
+                        BreakWallOnRaycast(hit);
+                    }
+                }
+
+                else
+                {
+                    RaycastHit[] hits = Physics.SphereCastAll(ray, radiusSphereCast, maxRangeRayCast, layerMask);
+                    for (int i = 0; i < hits.Length; i++)
+                    {
+                        BreakWallOnRaycast(hits[i]);
+                    }
                 }
             }
         }
