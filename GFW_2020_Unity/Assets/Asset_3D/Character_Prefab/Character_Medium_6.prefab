@@ -292,9 +292,10 @@ GameObject:
   m_Component:
   - component: {fileID: 228375550170028164}
   - component: {fileID: 603635142689587775}
+  - component: {fileID: -5085120699230905901}
   m_Layer: 0
-  m_Name: Character_Medium_Base
-  m_TagString: Untagged
+  m_Name: Character_Medium_6
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -336,6 +337,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 4
   m_CollisionDetection: 0
+--- !u!114 &-5085120699230905901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603635142689587774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd69014193030c343b4154ea0cad429b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &957831212410152327
 GameObject:
   m_ObjectHideFlags: 0
