@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void UpdateGameState(Phase newState)
+    public void UpdateGameState(Phase newState)
     {
         state = newState;
         if (state == Phase.Start)

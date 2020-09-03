@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     public float maxRangeRayCast;
     public WallCreator wallCreator;
 
+    public GameManager gameManager;
+
     void Update()
     {
         ReadInput();
@@ -46,6 +48,11 @@ public class PlayerController : MonoBehaviour
         {
             wallCreator.ResetWall();
             Debug.Log("Wall Reset");
+        }
+
+        else if (Input.GetKeyDown(KeyCode.N))
+        {
+            gameManager.UpdateGameState(Phase.NewRound);
         }
     }
 
