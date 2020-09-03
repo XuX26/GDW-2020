@@ -4,16 +4,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public PoseManager PoseManager;
+    public float temps;
 
-    public void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.transform.CompareTag("Wall"))
-        {
-            PoseManager.touch = true;
-        }
 
-    }
 
     public void OnTriggerEnter(Collider other)
     {
@@ -33,25 +26,24 @@ public class Player : MonoBehaviour
         if(PoseManager.passe)
         {
             PoseManager.instancePose = true;
-            PoseManager.touch = false;
-            if(PoseManager.touch == false)
-            {
-                //score ++
-            }
-            else if(PoseManager.touch)
-            {
-                //score --
-            }
-            else
-            {
-                //Score Normal
-            }
-
+           //score ++
         }
-        else if(PoseManager.passe == false && PoseManager.touch) // rajouter un couldown après avoir toucher le mur
+        else if(PoseManager.passe == false) // rajouter un couldown après avoir toucher le mur
         {
-            PoseManager.end = true;
+            temps -= Time.deltaTime;
+
+            //
+
+            if(temps <= 0 && PoseManager.passe == false)
+            {
+                PoseManager.end = true;
+            }
+            else if(temps >= 0 && PoseManager.passe == true)
+            {
+
+            }
             //FindObjectOfType<GameManager>().reloadScene();
         }
     }
+
 }

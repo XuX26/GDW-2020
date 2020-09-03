@@ -7,10 +7,11 @@ public class InstancePose : MonoBehaviour
     public GameObject[] prefab;
 
     private int randomPrefabInt;
-    public Transform SpawnPos; 
+    public Transform SpawnPos;
+    public float temps;
 
-    //void Start()
-   // {
+    void Start()
+     {
 
      //   for (int i = 0; i < prefab.Length; i++)
       //  {
@@ -18,7 +19,7 @@ public class InstancePose : MonoBehaviour
       //  }
       //  Instantiate(prefab[Random.Range(0, prefab.Length)]);
 
-    //}
+    }
 
     void Update()
     {

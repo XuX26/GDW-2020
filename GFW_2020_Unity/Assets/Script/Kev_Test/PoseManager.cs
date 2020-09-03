@@ -8,7 +8,6 @@ public static class PoseManager
     public static bool passe;
     public static bool instancePose;
     public static bool end;
-    public static bool touch;
     //public bool Victoire;
     // public bool timerOk;
 
