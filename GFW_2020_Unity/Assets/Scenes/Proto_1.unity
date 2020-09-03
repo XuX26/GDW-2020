@@ -616,7 +616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82a8c36d947117d4e95202f9b99070ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  instantDestroyMode: 1
+  instantDestroyMode: 0
   maxRangeRayCast: 25
 --- !u!1 &1129156994
 GameObject:
