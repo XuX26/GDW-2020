@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6346993706750474995}
   - component: {fileID: 6346993706750474994}
   - component: {fileID: 6346993706750474989}
+  - component: {fileID: -2481569238646565666}
   m_Layer: 0
   m_Name: WallDestroy_Particle
   m_TagString: Untagged
@@ -4756,6 +4757,19 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &-2481569238646565666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6346993706750474988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99324988747b64144bab679d8645b6f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeAnim: 0.5
 --- !u!1 &6346993707499561835
 GameObject:
   m_ObjectHideFlags: 0
