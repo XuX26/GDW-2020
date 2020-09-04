@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
     {
         UpdateGameState(Phase.Start);
         timerlast = timerStart;
+        soundManager.PlaySfx("Start_Timer");
     }
 
     // Update is called once per frame
@@ -44,7 +45,7 @@ public class GameManager : MonoBehaviour
         if (state == Phase.Start)
         {
             timerStart -= Time.deltaTime;
-            if(timerStart<=timerlast)
+            if (timerStart<=timerlast)
             {
                 timerlast -= 1;
                 timerfx.Effect();
@@ -53,6 +54,7 @@ public class GameManager : MonoBehaviour
             {
                 UpdateGameState(Phase.NewRound);
             }
+
         }
         else if (state == Phase.PlayMode)
         {
