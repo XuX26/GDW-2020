@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 553100534}
   - component: {fileID: 553100533}
   - component: {fileID: 553100532}
+  - component: {fileID: 553100535}
   m_Layer: 5
   m_Name: TimerFx
   m_TagString: Untagged
@@ -92,9 +93,28 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0ab81a726d65b6e4aa2d6ad441011477, type: 3}
   - {fileID: 21300000, guid: 5bd5fd428e2246f4483679a61d67f487, type: 3}
   - {fileID: 21300000, guid: a07942ad536774547a3f24f2a0025826, type: 3}
-  - {fileID: 21300000, guid: 9be36a3009711a84f94e7760e60e6a4c, type: 3}
+  - {fileID: 21300000, guid: 26938288990558e48981216040fb9c3f, type: 3}
   - {fileID: 0}
   Panel: {fileID: 787934080}
+--- !u!95 &553100535
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553100530}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 40e48d96a3608f0468a26e0ea75a953a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &787934080
 GameObject:
   m_ObjectHideFlags: 0
