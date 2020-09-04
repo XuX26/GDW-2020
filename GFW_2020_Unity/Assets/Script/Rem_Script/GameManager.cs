@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public int lifeLeft;
     public float timeLeft;
     public SoundManager soundManager;
+    public GameObject WallWinFx;
 
     public float speedup;
     public bool isPassed;
@@ -50,6 +51,11 @@ public class GameManager : MonoBehaviour
                 UpdateGameState(Phase.Check);
                 Debug.Log("Time out ! ");
             }
+        }
+
+         if (Input.GetKeyDown(KeyCode.Q))
+        {
+           
         }
 
     }
@@ -124,6 +130,7 @@ public class GameManager : MonoBehaviour
         soundManager.PlaySfx("Score");
         score += 150;
         CanvasManager.UpdateScore(score);
+        Instantiate(WallWinFx, new Vector3(0, 3, 0), Quaternion.identity);
     }
 
     void LoseOneLife()

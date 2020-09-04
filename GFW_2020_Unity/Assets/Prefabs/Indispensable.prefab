@@ -226,6 +226,12 @@ PrefabInstance:
       propertyPath: soundManager
       value: 
       objectReference: {fileID: 8468588208917432399}
+    - target: {fileID: 7446563701640678624, guid: f5906b6b74b62ed4a904a19ad6518892,
+        type: 3}
+      propertyPath: WallWinFx
+      value: 
+      objectReference: {fileID: 5641586200430567198, guid: a3ddf31037d9d3a4d98c116f9b1ae981,
+        type: 3}
     - target: {fileID: 7446563701640678626, guid: f5906b6b74b62ed4a904a19ad6518892,
         type: 3}
       propertyPath: m_Name
@@ -241,6 +247,12 @@ PrefabInstance:
       propertyPath: SoundManager
       value: 
       objectReference: {fileID: 8468588208917432399}
+    - target: {fileID: 7446563701640678630, guid: f5906b6b74b62ed4a904a19ad6518892,
+        type: 3}
+      propertyPath: WallDestroyFX
+      value: 
+      objectReference: {fileID: 6346993706750474988, guid: 3dba1f163199aa141af7ea0927fa56c8,
+        type: 3}
     - target: {fileID: 7446563701640678631, guid: f5906b6b74b62ed4a904a19ad6518892,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -327,6 +339,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 6104439023879483536}
+    - target: {fileID: 624309101, guid: d3162aca2f9f238489223cbb9b3fa964, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1965884271, guid: d3162aca2f9f238489223cbb9b3fa964, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
