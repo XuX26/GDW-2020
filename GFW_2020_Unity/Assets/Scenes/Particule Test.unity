@@ -2651,9 +2651,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Time: 0
   sprite:
+  - {fileID: 21300000, guid: 0ab81a726d65b6e4aa2d6ad441011477, type: 3}
   - {fileID: 21300000, guid: 5bd5fd428e2246f4483679a61d67f487, type: 3}
   - {fileID: 21300000, guid: a07942ad536774547a3f24f2a0025826, type: 3}
   - {fileID: 21300000, guid: 9be36a3009711a84f94e7760e60e6a4c, type: 3}
+  - {fileID: 0}
+  Panel: {fileID: 787934080}
 --- !u!114 &553100533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9232,6 +9235,11 @@ PrefabInstance:
       propertyPath: timerStart
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 6104439023879483536, guid: 89b612d3feb2e32458d7861d5ebd4fb1,
+        type: 3}
+      propertyPath: timerfx
+      value: 
+      objectReference: {fileID: 553100532}
     - target: {fileID: 9144780983640932324, guid: 89b612d3feb2e32458d7861d5ebd4fb1,
         type: 3}
       propertyPath: m_LocalPosition.x
