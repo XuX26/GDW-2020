@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public float timeLeft;
     public SoundManager soundManager;
     public GameObject WallWinFx;
+    public GameObject FxWin;
 
     public float speedup;
     public bool isPassed;
@@ -85,6 +86,8 @@ public class GameManager : MonoBehaviour
         else if (state == Phase.GameOver)
         {
             CanvasManager.DisplayReplayButton();
+            AfficheFx();
+
         }
     }
     
@@ -93,6 +96,11 @@ public class GameManager : MonoBehaviour
         instancePose.InstanciateCharacter();
         wallCreator.ResetWall();
         Debug.Log("Personnage et Mur spawn");
+    }
+
+    public void AfficheFx()
+    {
+        FxWin.SetActive(true);
     }
 
     private void DestroyChar()

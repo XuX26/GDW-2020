@@ -94,10 +94,7 @@ public class PlayerController : MonoBehaviour
             gameManager.UpdateGameState(Phase.NewRound);
         }
 
-        else if (Input.GetKeyDown(KeyCode.Q))
-        {
-            Instantiate(WallDestroyFX,new Vector3(0,0,0),Quaternion.identity);
-        }
+        
     }
 
     void BreakWallOnRaycast(RaycastHit hit)
