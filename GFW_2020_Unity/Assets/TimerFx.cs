@@ -26,6 +26,8 @@ public class TimerFx : MonoBehaviour
     {
         gameObject.GetComponent<Image>().sprite = sprite[Time];
         Time += 1;
+
+       
         if(Time==5)
         {
             Destroy(Panel);
