@@ -24,7 +24,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Proto_0.unity
     guid: 2b597d0bd2f344044b60e0a4a0759f30
   - enabled: 1
-    path: Assets/Scenes/Test_Scene_Kev/Menu_Principale.unity
+    path: Assets/Scenes/Kev_Test/Menu_Principale.unity
     guid: 5c25b3e433cdf7d499333686ced38a76
   - enabled: 1
     path: Assets/Scenes/Final.unity
