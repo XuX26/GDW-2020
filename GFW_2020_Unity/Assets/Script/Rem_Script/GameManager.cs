@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     public Phase state = Phase.Start;
 
+    
+    
     public GameObject Spawner;
     public bool Can_Destroy;
     public WallCreator wallCreator;
@@ -21,6 +23,8 @@ public class GameManager : MonoBehaviour
     public SoundManager soundManager;
     public GameObject WallWinFx;
     public GameObject FxWin;
+    public float timerlast;
+    public TimerFx timerfx;
 
     public float speedup;
     public bool isPassed;
@@ -31,6 +35,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         UpdateGameState(Phase.Start);
+        timerlast = timerStart;
     }
 
     // Update is called once per frame
@@ -39,6 +44,11 @@ public class GameManager : MonoBehaviour
         if (state == Phase.Start)
         {
             timerStart -= Time.deltaTime;
+            if(timerStart<=timerlast)
+            {
+                timerlast -= 1;
+                timerfx.Effect();
+            }
             if (timerStart < 0)
             {
                 UpdateGameState(Phase.NewRound);
