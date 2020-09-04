@@ -11,7 +11,9 @@ public class PlayerController : MonoBehaviour
     public float radiusSphereCast;
     public WallCreator wallCreator;
     public SoundManager SoundManager;
+    public GameObject WallDestroyFX;
 
+   
     private GameManager gameManager;
     int layerMask = 1 << 8;
 
@@ -91,11 +93,20 @@ public class PlayerController : MonoBehaviour
         {
             gameManager.UpdateGameState(Phase.NewRound);
         }
+
+        else if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Instantiate(WallDestroyFX,new Vector3(0,0,0),Quaternion.identity);
+        }
     }
 
     void BreakWallOnRaycast(RaycastHit hit)
     {
         wallCreator.AddDestroyedCube(hit.transform.gameObject);
         hit.transform.gameObject.SetActive(false);
+        Vector3 positionFx = hit.transform.position;
+        positionFx.z -= 1;
+        Instantiate(WallDestroyFX, positionFx, hit.transform.rotation);
+
     }
 }
