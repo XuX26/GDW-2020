@@ -8853,85 +8853,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1340827985003410896, guid: 89b612d3feb2e32458d7861d5ebd4fb1,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5171576155610944783, guid: 89b612d3feb2e32458d7861d5ebd4fb1,
         type: 3}
       propertyPath: m_Name
       value: Indispensable
-      objectReference: {fileID: 0}
-    - target: {fileID: 6104439023592917487, guid: 89b612d3feb2e32458d7861d5ebd4fb1,
-        type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6104439023879483536, guid: 89b612d3feb2e32458d7861d5ebd4fb1,
-        type: 3}
-      propertyPath: timerStart
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6104439023879483536, guid: 89b612d3feb2e32458d7861d5ebd4fb1,
-        type: 3}
-      propertyPath: soundManager
-      value: 
-      objectReference: {fileID: 2075420077}
-    - target: {fileID: 6104439023879483542, guid: 89b612d3feb2e32458d7861d5ebd4fb1,
-        type: 3}
-      propertyPath: SoundManager
-      value: 
-      objectReference: {fileID: 2075420077}
-    - target: {fileID: 6104439024188197567, guid: 89b612d3feb2e32458d7861d5ebd4fb1,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 46.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 6104439024188197567, guid: 89b612d3feb2e32458d7861d5ebd4fb1,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -82.59
-      objectReference: {fileID: 0}
-    - target: {fileID: 6104439024188197567, guid: 89b612d3feb2e32458d7861d5ebd4fb1,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 20.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6104439024858799930, guid: 89b612d3feb2e32458d7861d5ebd4fb1,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 16.45
-      objectReference: {fileID: 0}
-    - target: {fileID: 6104439024858799930, guid: 89b612d3feb2e32458d7861d5ebd4fb1,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6104439024858799930, guid: 89b612d3feb2e32458d7861d5ebd4fb1,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6104439024858799930, guid: 89b612d3feb2e32458d7861d5ebd4fb1,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6104439024858799930, guid: 89b612d3feb2e32458d7861d5ebd4fb1,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6104439024858799930, guid: 89b612d3feb2e32458d7861d5ebd4fb1,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 6104439024935696877, guid: 89b612d3feb2e32458d7861d5ebd4fb1,
-        type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9144780983640932324, guid: 89b612d3feb2e32458d7861d5ebd4fb1,
         type: 3}
@@ -8990,18 +8915,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89b612d3feb2e32458d7861d5ebd4fb1, type: 3}
---- !u!114 &2075420077 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8468588208917432399, guid: 89b612d3feb2e32458d7861d5ebd4fb1,
-    type: 3}
-  m_PrefabInstance: {fileID: 2075420076}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 769753d6f52a84c49be77b9b06e3c4c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &2081008484 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5413136627483638519, guid: ecb874f0feee64941b37da17cece2adc,
