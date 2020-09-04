@@ -112,7 +112,7 @@ public class GameManager : MonoBehaviour
 
     public void AfficheFx()
     {
-      //  FxWin.SetActive(true);
+       FxWin.SetActive(true);
     }
 
     private void DestroyChar()
